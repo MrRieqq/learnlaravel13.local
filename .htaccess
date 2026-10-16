@@ -1,0 +1,3 @@
+RewriteEngine On
+# Перенаправление всех входящий HTTP-запросов в публичную директорию public/
+RewriteRule ^(.*)$ public/$1 [L]
