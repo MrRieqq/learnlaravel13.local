@@ -71,10 +71,11 @@ RewriteRule ^(.*)$ public/$1 [L]
 Загрузка исходного кода из удаленного репозитория и установка backend-зависимостей согласно ```composer.lock```:
 
 ```bash
-git clone https://github.com/SkaterFeeD/learnlaravel13.git
+git clone https://github.com/MrRieqq/learnlaravel13.git
 cd learnlaravel13
 composer install
 # Так же можно использовать свой репозиторий если есть уже готовый проект
+# https://github.com/SkaterFeeD/learnlaravel13.git
 ```
 
 ### 2. Подготовка окружения и генерация app_key (ключа приложения)
