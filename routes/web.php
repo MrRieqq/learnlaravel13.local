@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\TestController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider; /* Глобальные ограничения */
 use App\Http\Controllers\PostController; /* Подключение контроллера */
@@ -218,7 +219,7 @@ Route::get('/about/{id}', function ($id) {
 Route::get('/animals/{catId}/{mouseId}', function ($catId, $mouseId) {
     return 'ID Кошки: ' . $catId . ' ID Мыши: ' . $mouseId;
 });
-
+/*
 // Ограничение параметров маршрутов в Laravel
 Route::get('/post/{id}', function ($id) {
     return 'post ' . $id;
@@ -265,3 +266,8 @@ Route::get('/blog/post/{id}', function ($id) {
 Route::get('/newblog/all/{id}', function ($id) {
     return 'blogs ' . $id;
 })->name('blogs');
+
+*/
+/* 47. Введение в Blade в Laravel */
+Route::get('/users', [UserController::class, 'index']);
+
