@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider; /* Глобальные ограничения */
 use App\Http\Controllers\PostController; /* Подключение контроллера */
 use App\Http\Controllers\WorkController;
+use App\Http\Controllers\ControllerForBlade;
 
 Route::get('/newpost', [PostController::class, 'show']); // Сокращенная запись обращения к контроллеру
 Route::get('/newposts', [PostController::class, 'all']); // Обращение ко второму методу контроллера
@@ -270,4 +271,6 @@ Route::get('/newblog/all/{id}', function ($id) {
 */
 /* 47. Введение в Blade в Laravel */
 Route::get('/users', [UserController::class, 'index']);
+/* 67. blade sam nah */
+Route::get('/bloody', [ControllerForBlade::class, 'index']);
 
