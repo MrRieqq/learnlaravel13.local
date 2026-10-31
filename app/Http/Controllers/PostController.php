@@ -6,8 +6,7 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function oldshow($id)
-    {
+    public function oldshow($id) {
         $posts = [
             1 => 'Вывелся текст под номером 1',
             2 => 'Вывелся текст под номером 2',
@@ -18,27 +17,20 @@ class PostController extends Controller
 
         return $posts[$id];
     }
-
     public function newshow($surname, $name)
     {
         return $surname . ' ' . $name;
     }
-
     public function shows($id)
     {
         return 'post ' . $id;
     }
-
-    public function show()
-    {
-        return 'hello world';
+    public function show() {
+        return "hello world";
     }
-
-    public function all()
-    {
+    public function all() {
         return 'all posts';
     }
-
     // 41. Структура представлений
     public function example()
     {

@@ -18,32 +18,32 @@ class UserController extends Controller
             'cls' => 'active',
             'val' => 'text',
             /* 50. Выполнение произвольного кода в командах Blade */
-            'first'=>'john',
-            'last'=>'smith',
+            'first' => 'john',
+            'last' => 'smith',
             /* 51. Арифметические операции в Blade в Laravel */
-            'a'=>10,
-            'b'=>3,
+            'a' => 10,
+            'b' => 3,
             /* 52. Работа с массивами в Blade */
-            'arr'=>[1,2,3,5,7,8],
+            'arr' => [1, 2, 3, 5, 7, 8],
             /* 53. Проверка переменных в Blade */
-            'var'=>true,
+            'var' => true,
             /* 54. Вывод неэкраннированных данных в Blade */
-            'name'=>'<b>John</b>',
+            'name' => '<b>John</b>',
             /* 56. Условия в Blade в Laravel */
-            'isAuth'=>true,
-            /* 58. Директива @elseif в Blade */
+            'isAuth' => true,
+            /* 58. Директика @elseif в Blade */
             'num' => 5,
-            /* 59. Директива @unless - является отрицанием */
-            'Auth'=>false,
+            /* 59. Директива @ unless - является отрицанием */
+            'Auth' => false,
             /* 60. Сложные команды в условиях Blade */
-            'arr1'=> [1,2,3],
+            'arr1' => [1, 2, 3],
             /* 61. Директива @foreach */
-            'arr2'=> ['a','b','c','d','e','f'],
-            /* 63. Условия и циклы @foreach в Blade */
-            'arr3'=> [-1,2,-3,4,5],
-            /* 64. Вложенные циклы @foreach в Blade */
+            'arr2' => ['a', 'b', 'c', 'd', 'e', 'f'],
+            /* 63. Условия и циклы @ foreach в Blade */
+            'arr3' => [-1, 2, -3, 4, 5],
+            /* 64. Вложенные циклы @ foreach в Blade */
             'arr4' => [[1, 2, 3], [4, 5, 6], [7, 8, 9]],
-            /* 65. Перебор многомерных массивов в Blade */
+            /* 65. Перебор многомерных массивов */
             'users1' => [
                 [
                     'name' => 'user1',
@@ -58,13 +58,12 @@ class UserController extends Controller
                     'age' => 23,
                 ],
             ],
-            /* 66. Цикл @forelse в Blade */
+            /* 66. Цикл @ forelse в Blade */
             'arr5' => ['a', 'b', 'c'],
-            /* 68. Директива @break в Blade (67) */
-            'arr6' => [1,2,3,4,5],
-            /* 70. Цикл @for в Blade */
+            /* 68. Директива @ break в Blade */
+            'arr6' => [1, 2, 3, 4, 5],
+            /* 70. Цикл for в Blade */
             'count' => 3,
-
         ];
 
 
