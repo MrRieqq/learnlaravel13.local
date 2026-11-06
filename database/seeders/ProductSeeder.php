@@ -15,11 +15,13 @@ class ProductSeeder extends Seeder
     public function run(): void
     {
         // Генерация рандомных данных с последующим вводов внутрь таблицы products
-        DB::table('products')->insert([
-            'name' => Str::random(10),
-            'description' => Str::random(50),
-            'price' => random_int(100, 1000)
-        ]);
+        for ($i = 0; $i < 20; $i++) {
+            DB::table('products')->insert([
+                'name' => Str::random(10),
+                'description' => Str::random(50),
+                'price' => random_int(100, 1000)
+            ]);
+        }
         DB::table('products')->insert([
             'name' => Str::random(10),
             'description' => Str::random(50),

@@ -13,11 +13,13 @@ class OrderSeeder extends Seeder
      */
     public function run(): void
     {
+        for ($i = 0; $i < 20; $i++) {
         DB::table('orders')->insert([
             'date' => now(),
             'total' => random_int(10, 100),
             'client_id' => random_int(1, 5),
         ]);
+        }
         DB::table('orders')->insert([
             'date' => now(),
             'total' => random_int(10, 100),

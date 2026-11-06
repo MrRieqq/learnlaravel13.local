@@ -14,7 +14,11 @@ Route::get('/newpost', [PostController::class, 'show']); // Сокращенна
 Route::get('/newposts', [PostController::class, 'all']); // Обращение ко второму методу контроллера
 Route::get('/longpost', [\App\Http\Controllers\Controller::class, '#']); // Удлиненная запись
 
-Route::get('/rarepost/{id}', [PostController::class, 'shows']);
+// 165. Получение данных из моделей Eloquent в Laravel
+Route::get('/rarepost/date', [PostController::class, 'data']);
+
+
+
 Route::get('/rarepost/{surname}/{name}', [PostController::class, 'newshow']);
 Route::get('/oldpost/{id}', [PostController::class, 'oldshow']);
 

@@ -13,12 +13,14 @@ class OrderlistSeeder extends Seeder
      */
     public function run(): void
     {
-        DB::table('orderlists')->insert([
-            'amount' => random_int(10, 100),
-            'price' => random_int(10, 1000),
-            'order_id' => random_int(1, 5),
-            'product_id' => random_int(1, 5),
-        ]);
+        for ($i = 0; $i < 20; $i++) {
+            DB::table('orderlists')->insert([
+                'amount' => random_int(10, 100),
+                'price' => random_int(10, 1000),
+                'order_id' => random_int(1, 5),
+                'product_id' => random_int(1, 5),
+            ]);
+        }
         DB::table('orderlists')->insert([
             'amount' => random_int(10, 100),
             'price' => random_int(10, 1000),

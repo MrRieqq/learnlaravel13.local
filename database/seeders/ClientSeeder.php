@@ -14,11 +14,13 @@ class ClientSeeder extends Seeder
      */
     public function run(): void
     {
+        for ($i = 0; $i < 20; $i++) {
         DB::table('clients')->insert([
            'surname' => Str::random(32),
            'name' => Str::random(32),
            'patronymic' => Str::random(32),
         ]);
+        }
         DB::table('clients')->insert([
             'surname' => Str::random(32),
             'name' => Str::random(32),
