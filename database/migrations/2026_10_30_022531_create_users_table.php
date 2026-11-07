@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('salary');
             $table->string('password');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

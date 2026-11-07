@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('name', 32);
             $table->string('patronymic', 32)->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
