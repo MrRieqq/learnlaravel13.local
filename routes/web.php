@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider; /* Глобальное ограничение */
 use App\Http\Controllers\PostController; /* Подключение контроллера */
 use App\Http\Controllers\TestController; /* Подключение контроллера */
-use App\Http\Controllers\RequestController; /* Подключение контроллера */
+use App\Http\Controllers\RequestController; /* 114. Подключение контроллера */
 
-Route::get('/migration', [RequestController::class, 'show']); // Сокращенная запись обращения к контроллеру
+Route::get('/migration', [RequestController::class, 'show']);
 
 
 Route::get('/newpost', [PostController::class, 'show']); // Сокращенная запись обращения к контроллеру
@@ -15,9 +15,7 @@ Route::get('/newposts', [PostController::class, 'all']); // Обращение �
 Route::get('/longpost', [\App\Http\Controllers\Controller::class, '#']); // Удлиненная запись
 
 // 165. Получение данных из моделей Eloquent в Laravel
-Route::get('/rarepost/date', [PostController::class, 'data']);
-
-
+Route::get('/rarepost/data', [PostController::class, 'data']);
 
 Route::get('/rarepost/{surname}/{name}', [PostController::class, 'newshow']);
 Route::get('/oldpost/{id}', [PostController::class, 'oldshow']);
@@ -77,7 +75,7 @@ Route::get('/post/{id}', function ($id) {
 Route::get('/post/{slug}/{id}', function ($slug, $id) {
     return 'post ' . $slug . ' id ' . $id;
 })->where('slug', '[a-z0-9_-]+') // a-z - любые строчные (маленькие) буквы латинского алфавита от a до z
-    ->where('id', '[0-9]+');  // 0-9 - любые цифры от 0 до 9
+->where('id', '[0-9]+');  // 0-9 - любые цифры от 0 до 9
 
 // Шаблонные ограничения параметров маршрутов
 Route::get('/posts/{id}' , function ($id) {
@@ -125,11 +123,3 @@ Route::get('/newblog/all/{id}', function($id) {
 
 /* 47. Введение в Blade в Laravel */
 Route::get('/users', [UserController::class, 'index']);
-
-
-
-
-
-
-
-

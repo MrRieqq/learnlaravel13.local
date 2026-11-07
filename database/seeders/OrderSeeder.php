@@ -13,13 +13,20 @@ class OrderSeeder extends Seeder
      */
     public function run(): void
     {
+        // Цикл на создание 20 записей в базе данных
         for ($i = 0; $i < 20; $i++) {
+            // Генерация рандомных данных с последующим вводов внутрь таблицы products
+            DB::table('orders')->insert([
+                'date' => now(),
+                'total' => random_int(10, 100),
+                'client_id' => random_int(1, 5),
+            ]);
+        }
         DB::table('orders')->insert([
             'date' => now(),
             'total' => random_int(10, 100),
             'client_id' => random_int(1, 5),
         ]);
-        }
         DB::table('orders')->insert([
             'date' => now(),
             'total' => random_int(10, 100),
