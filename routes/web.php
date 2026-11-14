@@ -7,6 +7,24 @@ use Illuminate\Support\ServiceProvider; /* Глобальное ограниче
 use App\Http\Controllers\PostController; /* Подключение контроллера */
 use App\Http\Controllers\TestController; /* Подключение контроллера */
 use App\Http\Controllers\RequestController; /* 114. Подключение контроллера */
+use App\Http\Controllers\WorkController;
+
+// ====Задания с 194 по 230====
+
+// Главная страница с формами
+Route::get('/work', [WorkController::class, 'index'])
+    ->name('work.index');
+
+// Отправка и обработка формы методом POST
+Route::post('/work', [WorkController::class, 'submit'])
+    ->name('work.submit');
+
+// Один маршрут для GET и POST
+Route::match(['get', 'post'], '/work/{id}/{login}',
+    [WorkController::class, 'routeExample']
+)->name('work.route');
+
+
 
 Route::get('/migration', [RequestController::class, 'show']);
 
